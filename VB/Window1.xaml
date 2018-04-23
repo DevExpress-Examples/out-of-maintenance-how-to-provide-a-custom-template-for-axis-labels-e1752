@@ -1,0 +1,40 @@
+﻿<Window x:Class="RotatedAxisXLabels.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" Title="Rotated AxisX Labels" Height="300" Width="400">
+    
+    <Window.Resources>
+        <DataTemplate x:Key="AxisXLabelTemplate">
+            <Border>
+                <Border.LayoutTransform>
+                    <RotateTransform Angle="-90" />
+                </Border.LayoutTransform>
+                <Label Content="{Binding Path=Text}" Padding="1,0,1,3" Background="Transparent" Foreground="{Binding Path=Label.Foreground}" FontSize="{Binding Path=Label.FontSize}" FontFamily="{Binding Path=Label.FontFamily}" FontStretch="{Binding Path=Label.FontStretch}" FontStyle="{Binding Path=Label.FontStyle}" FontWeight="{Binding Path=Label.FontWeight}" />
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <Grid>
+        <dxc:ChartControl Name="chartControl1">
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D>
+                    <dxc:XYDiagram2D.AxisX>
+                        <dxc:AxisX2D>
+                            <dxc:AxisX2D.Label>
+                                <dxc:AxisLabel Template="{StaticResource AxisXLabelTemplate}" />
+                            </dxc:AxisX2D.Label>
+                        </dxc:AxisX2D>
+                    </dxc:XYDiagram2D.AxisX>
+                    <dxc:XYDiagram2D.Series>
+                        <dxc:BarSideBySideSeries2D>
+                            <dxc:BarSideBySideSeries2D.Points>
+                                <dxc:SeriesPoint Argument="First Argument" Value="1" />
+                                <dxc:SeriesPoint Argument="Second Argument" Value="2" />
+                                <dxc:SeriesPoint Argument="Third Argument" Value="3" />
+                                <dxc:SeriesPoint Argument="Fourth Argument" Value="4" />
+                                <dxc:SeriesPoint Argument="Fifth Argument" Value="5" />
+                            </dxc:BarSideBySideSeries2D.Points>
+                        </dxc:BarSideBySideSeries2D>
+                    </dxc:XYDiagram2D.Series>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+        </dxc:ChartControl>
+    </Grid>
+</Window>
