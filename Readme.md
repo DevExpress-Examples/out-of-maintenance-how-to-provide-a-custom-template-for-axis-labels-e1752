@@ -5,8 +5,13 @@
 <!-- default file list end -->
 # How to provide a custom template for axis labels
 
+ You can specify label properties or define a [data template](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/data/data-templating-overview?view=netframeworkdesktop-4.8) for axis labels to change their appearance. 
+ 
+ This example specifies the following properties for X-axis labels: [](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.AxisLabel.Angle),
+[Background](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control.background?view=netcore-3.1#System_Windows_Controls_Control_Background), [FontSize](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control.fontsize?view=netcore-3.1#System_Windows_Controls_Control_FontSize), [FontStyle](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control.fontstyle?view=netcore-3.1#System_Windows_Controls_Control_FontStyle),  [FontWeight](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control.fontweight?view=netcore-3.1#System_Windows_Controls_Control_FontWeight), [Foreground](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control.foreground?view=netcore-3.1#System_Windows_Controls_Control_Foreground), and []((https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.AxisLabel.TextPattern).
 
-<p>The following example demonstrates how to change the appearance of <a href="https://documentation.devexpress.com/#WPF/CustomDocument6336">Axis Labels</a> by using the <a href="https://documentation.devexpress.com/#WPF/clsDevExpressXpfChartsAxisLabeltopic">AxisLabel</a>.<a href="https://documentation.devexpress.com/#WPF/DevExpressXpfChartsChartTextElement_ElementTemplatetopic">ElementTemplate Property</a>, for example, to rotate them by a specific angle.</p>
+
+The example defines a [data template](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/data/data-templating-overview?view=netframeworkdesktop-4.8) for Y-axis labels. Assign this template to the [ElementTemplate](xref:DevExpress.Xpf.Charts.ChartTextElement.ElementTemplate) property to apply it to labels.
 
 <br/>
 
